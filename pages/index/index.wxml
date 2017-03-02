@@ -36,7 +36,7 @@
   <!--nav-->
   <view class="nav flex">
     <block wx:for="{{nav}}" wx:for-item="item">
-      <navigator  class="nav-item" >
+      <navigator  class="nav-item" url="../other/other">
         <image src="{{item.img}}"></image>
         <text>{{item.title}}</text>
       </navigator>

@@ -1,0 +1,126 @@
+<!--index.wxml-->
+<view class="pageContainer  bgC">
+  <!--search-->
+  <view class="search flex">
+    <view class="search-left">
+      <view class="seach-box">
+        <view></view>
+      </view>
+      <input placeholder="网易云课堂" placeholder-class="search-placeholder" placeholder-style="color : #999;"/>
+    </view>
+    <view class="search-right flex-item" bindtap="show">
+      <image src="../../images/email.png"></image>
+    </view>
+  </view>
+
+
+  <!--banner-->
+  <view class="bannerbox">
+    <!--bannerImg-->
+    <swiper class="banner flex" autoplay curent bindchange="dots" duration="1000" interval="2000">
+      <swiper-item wx:for="{{banner.bannerimg}}"  wx:for-index="idx" wx:for-item="item" >
+        <view class="banner-item">
+          <navigator url="../other/other">
+            <image src="{{item.img}}"></image>
+          </navigator>
+        </view>
+      </swiper-item>
+    </swiper>
+    <!--bannerBtn-->
+    <view  class="banner-btn flex">
+      <block wx:for="{{banner.bannerimg}}" wx:for-index="idx" wx:for-item="item">
+          <view class="{{ idx == bannerCurrindex ? 'active':'' }}" bindtap="bindStlBanner" ></view>
+      </block>
+    </view>
+  </view>
+  <!--nav-->
+  <view class="nav flex">
+    <block wx:for="{{nav}}" wx:for-item="item">
+      <navigator  class="nav-item" >
+        <image src="{{item.img}}"></image>
+        <text>{{item.title}}</text>
+      </navigator>
+    </block>
+  </view>
+  <!--ad-->
+  <view class="ad flex">
+    <block>
+      <navigator url="../other/other">
+        <image src="{{bg}}"></image>
+      </navigator>
+    </block>
+  </view>
+  <!--courses grow-->
+  <view class="course-grp flex" >
+    <block>
+      <view class="course-grp-name flex">
+        <text>{{course_grp.name}}</text>
+        <navigator>免费排行榜》</navigator>
+      </view>
+      <view class="course-grp-item flex">
+        <block wx:for="{{course_grp.list}}" wx:for-item="item">
+          <navigator class="flex flex-col" url="../other/other">
+            <image src="{{item.img}}"></image>
+            <text>{{item.title}}</text>
+            <text></text>
+          </navigator>
+        </block>
+      </view>
+    </block>
+  </view>
+
+  <view class="course-grp flex" >
+    <block>
+      <view class="course-grp-name flex">
+        <text>{{best.name}}</text>
+        <navigator>畅销排行榜》</navigator>
+      </view>
+      <view class="course-grp-item flex">
+        <block wx:for="{{best.list}}" wx:for-item="item">
+          <navigator class="flex flex-col" url="../other/other">
+            <image src="{{item.img}}"></image>
+            <text>{{item.title}}</text>
+            <text class="highlight">{{item.Present_price}} <text>{{item.original_price}}</text></text>
+          </navigator>
+        </block>
+      </view>
+    </block>
+  </view>
+
+  <view class="special course-grp flex">
+    <block>
+      <view class="special_title flex">
+      <text>
+       {{speaicl.name}}
+      </text>
+      </view>
+      <view  wx:for="{{speaicl.list}}" wx:for-item="item" class="special_item course-grp-item">
+        <image src="{{item.img}}"></image>
+      </view>
+    </block>
+  </view>
+
+  <view wx:for="{{main}}" wx:for-item="item" wx:for-index="ind"  class="course-grp flex" >
+    <block>
+      <view class="course-grp-name flex">
+        <text>{{item.name}}</text>
+        <navigator>{{item.name}}排行榜》</navigator>
+      </view>
+      <view class="course-grp-item flex">
+        <block wx:for="{{item.list}}" wx:for-item="item" wx:for-index="index">
+          <navigator class="flex flex-col {{ index == 0?'item_big':'' }} " url="../other/other">
+            <image src="{{item.img}}"></image>
+            <text>{{item.title}}</text>
+            <text class="highlight">{{item.Present_price}} <text>{{item.original_price}}</text></text>
+          </navigator>
+        </block>
+      </view>
+    </block>
+  </view>
+
+  <!--全部课程-->
+  <view class="navigator-course">
+    <navigator bindtap="urlAcc" >{{moreCourses.title}}</navigator>
+  </view>
+ 
+</view>

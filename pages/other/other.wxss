@@ -1,0 +1,129 @@
+/* pages/other/other.wxss */
+page{
+    width: 100%;
+    height: 100%;
+    font-family: "微软雅黑";
+    overflow: hidden;
+}
+
+.other{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.other button{
+    width: 100%;
+    border-radius: 0;
+    background: #2cc17b;
+    color: #fff;
+    font-size: 30rpx;
+}
+
+.header{
+    height: 80rpx;
+    line-height: 80rpx;
+    font-size: 35rpx;
+    text-align: center;
+    position: relative;
+}
+.header .back{
+    position: absolute;
+    width: 30rpx;
+    height: 40rpx;
+    top: 25rpx;
+    left: 20rpx;
+    background: url( "../../images/ionic/arrow_left_disabled.png" ) no-repeat;
+    background-size: 30rpx 40rpx;
+}
+
+.header image{
+    position: absolute;
+    top: 20rpx;
+    right: 20rpx;
+    width: 40rpx;
+    height: 40rpx;
+}
+
+.main{
+    flex: 1;
+    overflow: hidden;
+}
+
+.main scroll-view{
+    width: 100%;
+    height: 100%;
+}
+
+.banner{
+    height: 400rpx;
+}
+.banner image{
+    height: 100%;
+}
+
+.nav{
+    height: 80rpx;
+    line-height: 80rpx;
+    display: flex;
+}
+
+.nav view{
+    flex: 1;
+    font-size: 30rpx;
+    text-align: center;
+}
+.nav text{
+    box-sizing: border-box;
+    display: inline-block;
+    padding:  0 30rpx;
+    height: 100%;
+}
+
+.active{
+    color: #2cc17b;
+    border-bottom: 2px solid #2cc17b;
+}
+
+.title,.type,.introduce,.apply,.a_lecturer{
+    height: 160rpx;
+    width: 95%;
+    margin: 0 auto;
+    border-bottom: 1px solid #eee;
+}
+.title{
+    box-sizing: border-box;
+    line-height: 100rpx;
+    font-size: 40rpx;
+}
+
+.title text{
+    font-size: 28rpx;
+    color: #999;
+    line-height: 20rpx;
+    display: block;
+}
+
+.type{
+    font-size: 50rpx;
+    line-height: 160rpx;
+    font-weight: 500;
+    color: #2cc17b;
+}
+.gap{
+    height: 20rpx;
+    background: #f1f1f1;
+}
+.introduce,.apply,.a_lecturer{
+    font-size: 35rpx;
+    line-height: 80rpx;
+}
+.introduce text,.apply text,.a_lecturer text{
+    font-size: 28rpx;
+    color: #666;
+    display: block;
+    line-height: 40rpx;
+}
+

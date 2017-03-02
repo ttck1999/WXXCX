@@ -1,0 +1,74 @@
+<view class="pageContainer">
+
+    <view class="search flex">
+        <view class="setting">
+            <view bindtap="setting"></view>
+        </view>
+        <view class="search-right flex-item" bindtap="upper">
+        <image bindtap="show" src="../../images/email.png"></image>
+        </view>
+    </view>
+
+    <view class="logged" wx-if="{{user}}">
+        <view class="userLogin">
+            <image src="../../images/initial/zx5.gif"></image>
+        </view>
+
+        <view>
+            <text bindtap="learning">
+                空空如你，快开始学习吧
+            </text>
+        </view>
+    </view>
+
+
+    <view class="not_logged_in" wx-if="{{!user}}">
+        <view class="userLogin">
+            <view>
+                <image src="../../images/ionic/ic_launcher.png"></image>
+            </view>
+            <text>你尚未登录</text>
+            <text>无法记录和同步学习进度，建议登录后再学习</text>
+        </view>
+
+        <view class="loginTo">
+            <button class="tell" bindtap="login">手机号登陆</button>
+            <button class="call" bindtap="register">注册</button>
+        </view>
+
+        <view class="next">
+            <text>其他方式登录</text>
+            <view class="nextLogin">
+                <view wx:for="{{login}}" wx:for-item="item">
+                    <view class="imgUrl"><image src="{{item.img}}"></image></view>
+                    <text>{{item.name}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+
+    <view class="loginbox {{cLass}}">
+
+        <view class="back" bindtap="hide">X</view>
+
+        <view class="ban">
+            <image src="../../images/ionic/logo_green.png"></image>
+            <text>顶尖互联网教育平台</text>
+        </view>
+
+        <view class="way">
+            <button class="tell" bindtap="login">手机号登陆</button>
+            <button class="call" bindtap="register">注册</button>
+        </view>
+
+        <view class="next">
+            <text>其他方式登录</text>
+            <view class="nextLogin">
+                <view wx:for="{{login}}" wx:for-item="item">
+                    <view class="imgUrl"><image src="{{item.img}}"></image></view>
+                    <text>{{item.name}}</text>
+                </view>
+            </view>
+        </view>
+   </view>
+</view>

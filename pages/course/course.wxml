@@ -1,0 +1,60 @@
+<view class="course pageContainer">
+    <view class="search flex">
+        <view class="search-left">
+            <view class="seach-box">
+                <view></view>
+            </view>
+            <input placeholder="网易云课堂" placeholder-class="search-placeholder" placeholder-style="color : #999;"/>
+        </view>
+
+        <view class="search-right flex-item" bindtap="show">
+        <image src="../../images/ionic/ic_course_detail_message.png"></image>
+        </view>
+  </view>
+  
+  <view class="main">
+    <view class="courses-left">
+        <view wx:for="{{courses}}" class="{{ coursesInd == index?'active':'' }}" wx:for-item="item">
+            <text bindtap="changeList" data-index="{{index}}">{{item}}</text>
+        </view>
+    </view>
+
+    <view class="courses-right">
+        <scroll-view scroll-y="true">
+            <view  wx:for="{{mainList}}" wx:for-item="item">
+                <view class="catalog">{{item.name}}</view>
+                <view class="listing">
+                    <text wx:for="{{item.list}}" wx:for-item="list">{{list}}</text>
+                </view>
+            </view>
+        </scroll-view>
+    </view>
+
+  </view>
+  
+  <view class="loginbox {{cLass}}">
+
+        <view class="back" bindtap="hide">X</view>
+
+        <view class="ban">
+            <image src="../../images/ionic/logo_green.png"></image>
+            <text>顶尖互联网教育平台</text>
+        </view>
+
+        <view class="way">
+            <button class="tell" bindtap="login">手机号登陆</button>
+            <button class="call" bindtap="register">注册</button>
+        </view>
+
+        <view class="next">
+            <text>其他方式登录</text>
+            <view class="nextLogin">
+                <view wx:for="{{login}}" wx:for-item="item">
+                    <view class="imgUrl"><image src="{{item.img}}"></image></view>
+                    <text>{{item.name}}</text>
+                </view>
+            </view>
+        </view>
+   </view>
+
+</view>

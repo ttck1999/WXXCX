@@ -1,0 +1,73 @@
+.register{
+    width: 70%;
+    height: 600rpx;
+    margin: 150rpx auto;
+    font-family: "微软雅黑"
+}
+
+.register input{
+    padding-top: 30rpx;
+    float: left;
+}
+.register .sim{
+    width: 45%;
+}
+
+.register .user,.yz{
+    height: 100rpx;
+    line-height: 100rpx;
+    font-size: 30rpx;
+    border-bottom: 1px solid #eee;
+}
+.register .word{
+    height: 100rpx;
+}
+
+.register text{
+    float: left;
+    padding-right: 20rpx;
+    line-height: 100rpx;
+    font-size: 30rpx;
+    color: #999;
+}
+.but{
+    padding-top: 150rpx;
+    text-align: center
+}
+.but button{
+    height: 80rpx;
+    line-height: 80rpx;
+    font-size: 30rpx;
+    color: #fff;
+    background: #2cc17b;
+}
+.but text{
+    float: none;
+}
+
+
+.alert{
+    position: relative;
+    width: 60%;
+    height: 20%;
+    background: #000;
+    opacity: .5;
+    position: absolute;
+    left: 20%;
+    top: 40%;
+}
+
+.alert text{
+    position: absolute;
+    display: block;
+    text-align: center;
+    color: #fff;
+    top: 50%;
+    margin-top: -20rpx;
+    width: 100%;
+    line-height: 40rpx;
+    font-size: 40rpx; 
+}
+.error{
+    display: none;
+}

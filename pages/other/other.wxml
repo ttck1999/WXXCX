@@ -1,0 +1,74 @@
+<view class="other">
+    <view class="header">
+        <view class="back" bindtap="back"></view>
+        课程详情
+        <image src="../../images/ionic/ic_courseware_exam_normal.png"></image>
+    </view>
+    <view class="main">
+        <scroll-view scroll-y="true">
+            <view class="banner">
+                <image src="../../images/initial/zx2.gif"></image>
+            </view>
+
+            <view class="nav">
+                <view>
+                    <text class="{{ navActive==0?'active':'' }}">介绍</text></view>
+                <view>
+                    <text class="{{ navActive==1?'active':'' }}">目录</text></view>
+                <view>
+                    <text class="{{ navActive==2?'active':'' }}">评价</text></view>
+            </view>
+
+            <view class="content">
+                <view class="title">
+                    木头哥哥讲科学
+                    <text>691人学过</text>
+                </view>
+
+                <view class="type">
+                    免费
+                </view>
+                <view class="gap"></view>
+                <view class="introduce">
+                    课程介绍
+                    <text>在这一系列的内容中，会用几分钟讲一个有趣的科学知识。有天文宇宙，还有恐龙</text>
+                </view>
+
+                <view class="apply">
+                    适用人群
+                    <text>对恐龙和科学感兴趣的学前儿童，或是小学生</text>
+                </view>
+
+                <view class="a_lecturer">
+                    讲师
+                   <text>木头哥哥讲科学</text>
+                </view>
+            </view>
+        </scroll-view>
+    </view>
+    <button>加入学习</button>
+    <view class="loginbox {{cLass}}">
+
+        <view class="back" bindtap="hide">X</view>
+
+        <view class="ban">
+            <image src="../../images/ionic/logo_green.png"></image>
+            <text>顶尖互联网教育平台</text>
+        </view>
+
+        <view class="way">
+            <button class="tell" bindtap="login">手机号登陆</button>
+            <button class="call" bindtap="register">注册</button>
+        </view>
+
+        <view class="next">
+            <text>其他方式登录</text>
+            <view class="nextLogin">
+                <view wx:for="{{login}}" wx:for-item="item">
+                    <view class="imgUrl"><image src="{{item.img}}"></image></view>
+                    <text>{{item.name}}</text>
+                </view>
+            </view>
+        </view>
+   </view>
+</view>

@@ -1,0 +1,173 @@
+/**index.wxss**/
+page{
+  font-family: "微软雅黑";
+}
+.container{
+  height: 500rpx;
+  display: flex;
+  color: #313131;
+}
+
+.pageContainer{
+  font-size: 14rpx;
+  color: #000;
+}
+
+/*banner*/
+.bannerbox{
+  height: 430rpx;
+  width:750rpx;
+  position: relative;
+}
+.bannerbox swiper{
+  height: 100%;
+}
+.banner{
+  flex-direction:row;
+  align-items:center;
+}
+.bannerimg{
+  width:750rpx;
+  height: 430rpx;
+  display: none;
+}
+.banner-item image{
+  width: 100%;
+  height: 183px;
+}
+.banner .active{
+  width:750rpx;
+  height: 430rpx;
+  display: inline-block;
+}
+.banner-btn{
+  width:100%;
+  position: absolute;
+  bottom:20rpx;
+  flex-direction:row;
+  justify-content:center;
+}
+.banner-btn view{
+  width:20rpx;
+  height: 20rpx;
+  margin: 10rpx;
+  background-color: rgba(255,255,255,0.4);
+  border-radius: 50%;
+}
+.banner-btn  .active{
+  background-color: #FFF;
+}
+
+/*nav*/
+.nav{
+ flex-wrap:wrap;
+ justify-content:center;
+}
+.nav-item{
+  box-sizing: border-box;
+  padding: 30rpx 30rpx 0 30rpx;
+  width: 25%;
+  float: left;
+}
+.nav-item image{
+  width:120rpx;
+  height: 120rpx;
+  margin: 0 auto;
+  border-radius:50%;
+}
+.nav-item text{
+  display: block;
+  font-size: 30rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  color:#000;
+  text-align: center;
+}
+
+.ad image{
+  height: 150rpx;
+}
+
+/*courseGrp*/
+.course-grp {
+  flex-wrap:wrap;
+  justify-content: space-around;
+}
+.course-grp-name{
+  width: 750rpx;
+  height: 60rpx;
+  justify-content:space-between;
+  align-items:center;
+  background-color: rgba(217, 217, 217, 0.2)
+}
+.course-grp-name text{
+  font-size: 30rpx;
+  line-height: 50rpx;
+  color: #000 ;
+  padding-left: 30rpx;
+  background:url("../../images/section_title_tip.png") left no-repeat;
+}
+.course-grp-name navigator{
+  font-size: 24rpx;
+  color: rgba(217, 217, 217, 0.8);
+  padding-right: 20rpx;
+}
+
+.course-grp-item navigator{
+  width:340rpx;
+}
+.course-grp-item text{
+  color:#000;
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 30rpx;
+}
+.course-grp-item .highlight{
+  color: red;
+}
+.highlight text{
+  color: lightgray;
+  padding-left: 10rpx;
+  text-decoration: line-through;
+}
+
+.special_title{
+  font-size: 30rpx;
+  text-align: center;
+  width:750rpx;
+  height:60rpx;
+  justify-content:space-between;
+  align-items:center;
+  background-color:rgba(217, 217, 217, 0.2);
+}
+.special_title text{
+  margin: 0 auto;
+  height: 100%;
+  line-height: 25rpx;
+}
+.special_item{
+  width:700rpx;
+  height:200rpx;
+}
+
+.special_item image{
+  width: 100%;
+  height: 100%;
+}
+
+.course-grp-item  .item_big{
+  width: 700rpx
+}
+.item_big image{
+  width: 100%;
+  height: 200rpx;
+}
+
+
+/*更多课程*/
+.navigator-course{
+  padding: 10rpx 0 40rpx;
+  color:#4bbc93;
+  font-size: 24rpx;
+}
+

@@ -1,0 +1,21 @@
+<view class="register">
+    <view class="user">
+        <text>手机：+86</text>
+        <input data-value="{{user}}"  bindinput="bindKeyInput" value="{{user}}"/>
+    </view>
+    <view class="yz">
+        <text>验证码：</text>
+        <input  class="sim" data-value="{{yz}}" bindinput="bindyz" value="{{yz}}"/>
+        发送验证码
+    </view>
+    <view class="user">
+        <text>设置密码：</text>
+        <input password data-value="{{password}}"   bindinput='bindpassword' value="{{password}}"/>
+    </view>
+    <view class="but">
+        <button bindtap="register" disabled="{{disabled}}">注册</button>
+    </view>
+    <view class="alert {{error}}">
+        <text>用户名或密码错误</text>
+    </view>
+</view>

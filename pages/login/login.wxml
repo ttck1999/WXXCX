@@ -1,0 +1,18 @@
+<view class="login">
+    <view class="user">
+        <text>手机：+86</text>
+        <input data-value="{{user}}"  bindinput="bindKeyInput" value="{{user}}"/>
+    </view>
+    <view class="word">
+        <text>密码：</text>
+        <input password data-value="{{password}}" bindinput='bindpassword' value="{{password}}"/>
+    </view>
+    <view class="but">
+        <button bindtap="login" disabled="{{disabled}}">登录</button>
+        <text>忘记密码？</text>
+    </view>
+
+    <view class="alert {{error}}">
+        <text>用户名或密码错误</text>
+    </view>
+</view>
